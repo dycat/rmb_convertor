@@ -1,5 +1,7 @@
 import { expect, test } from "vitest";
+import { toFormal } from "./convertor";
 
-test('Hello vitest', () => {
-    expect(Math.sqrt(4)).toBe(2);
+// test convert cases
+test('Test convert single number', () => {
+    expect(toFormal('1')).toBe("壹");
 })

@@ -11,3 +11,8 @@ let count_letter = {
     "100000000": "亿" 
 }
 
+function toFormal() {
+    return "壹"
+}
+
+export { toFormal };
