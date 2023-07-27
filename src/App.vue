@@ -4,7 +4,7 @@
 
 <template>
   <main>
-    <h2>RMB Convertor</h2>
+    <img src="@/assets/Logo.png" alt="Logo" width="150" height="150">
     <ul>
       <input type="text">
       <button>转换</button>
