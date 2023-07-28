@@ -8,7 +8,8 @@ test('Test convert single number', () => {
 })
 
 test('Test convert double number', () => {
-
+    expect(toFormal('12')).toBe('壹拾贰');
+    expect(toFormal("23")).toBe("贰拾叁");
 })
 
 test('Test convert hunderd number', () => {

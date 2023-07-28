@@ -11,8 +11,16 @@ let count_letter = {
     "100000000": "亿" 
 }
 
+// number: shall be a string of number
 function toFormal(number) {
-    return formal_letter[number]
+    if (number.length == 1) {
+        return formal_letter[number];
+    }
+    if (number.length == 2) {
+        return formal_letter[number[0]] + count_letter["10"] +  formal_letter[number[1]]
+    }
+    return "";
+    
 }
 
 export { toFormal };
