@@ -13,5 +13,6 @@ test('Test convert double number', () => {
 })
 
 test('Test convert hunderd number', () => {
-    
+    expect(toFormal('123')).toBe('壹佰贰拾叁');
+    expect(toFormal('120')).toBe("壹佰贰拾");
 })

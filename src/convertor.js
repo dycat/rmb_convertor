@@ -1,7 +1,7 @@
 
 
 let formal_letter = {
-    "0": "零", "1": "壹", "2": "贰", "3": "叁",
+    "0": "", "1": "壹", "2": "贰", "3": "叁",
     "4": "肆", "5": "伍", "6": "陆", "7": "柒",
     "8": "捌", "9": "玖" 
 }
@@ -18,6 +18,10 @@ function toFormal(number) {
     }
     if (number.length == 2) {
         return formal_letter[number[0]] + count_letter["10"] +  formal_letter[number[1]]
+    }
+    if (number.length == 3) {
+        return number[1] == "0" ? formal_letter[number[0]] + count_letter["100"] 
+                                              : formal_letter[number[0]] + count_letter["100"] + formal_letter[number[1]] + count_letter["10"] + formal_letter[number[2]]
     }
     return "";
     
