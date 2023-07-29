@@ -16,7 +16,7 @@ watch(num_input, async (num_input) => {
       <img class="" src="@/assets/Logo.png" alt="Logo" width="150" height="150">
     <ul>
       <input type="text" class="mr-6" v-model="num_input">
-      <button>转换</button>
+      <!-- <button>转换</button> -->
       <p>{{ formal_form }}</p>
     </ul>
     </div>
