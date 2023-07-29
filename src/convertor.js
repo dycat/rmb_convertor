@@ -7,7 +7,7 @@ let formal_letter = {
 }
 
 let count_letter = {
-    "10": "拾", "100": "佰", "1000": "仟", "10000": "万",
+    "10": "拾", "100": "佰", "1000": "仟", "10000": "万", "100000": "拾万",
     "100000000": "亿" 
 }
 
@@ -21,7 +21,18 @@ function toFormal(number) {
     }
     if (number.length == 3) {
         return number[1] == "0" ? formal_letter[number[0]] + count_letter["100"] 
-                                              : formal_letter[number[0]] + count_letter["100"] + formal_letter[number[1]] + count_letter["10"] + formal_letter[number[2]]
+                                : formal_letter[number[0]] + count_letter["100"] + formal_letter[number[1]] + count_letter["10"] + formal_letter[number[2]]
+    }
+    if (number.length == 4) {
+        return formal_letter[number[0]] + count_letter["1000"]
+    }
+    if (number.length == 5) {
+        return formal_letter[number[0]] + count_letter["10000"]
+    }
+
+    if (number.length == 6) {
+        return number[1] == "0" ? formal_letter[number[0]] + count_letter["100000"]
+                             : formal_letter[number[0]] + count_letter["100000"][0] + formal_letter[number[1]] + count_letter["10000"] 
     }
     return "";
     
